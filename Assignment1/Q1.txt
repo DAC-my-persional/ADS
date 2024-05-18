@@ -1,0 +1,80 @@
+package com.sunbeam;
+
+import java.util.Scanner;
+
+public class binary {
+	public static void main1(String[] args) {
+		int arr[] = {10,20,30,20,10};
+		int j =arr.length-1;
+		Boolean flag= true;
+		for (int i=0 ; i<arr.length ; i++) {
+			if(arr[i]!= arr[j]) {
+				flag = false;
+				break;
+			}
+			
+			else {
+				flag= true;
+			
+			}
+			j--;
+		}
+		
+		if(flag==false) {
+			System.out.println("array is not a palandrome");
+		}
+		else {
+			System.out.println("array is a palandrome");
+		}
+		
+	}
+	
+	public static void main2(String[] args) {
+		String str = "level";
+		Boolean flag = true;
+		int j= str.length()-1;
+		for(int i =0 ; i<str.length(); i++) {
+			if(str.charAt(i)!=str.charAt(j)) {
+				flag = false;
+				break;
+			}
+			else {
+				flag = true;
+			}
+			j--;
+		}
+	
+		
+		if (flag== false) {
+			System.out.println("String is not a palandrome");
+		}
+		else {
+			System.out.println("String is a palandrome");
+		}
+	}
+	
+	public static void main(String[] args) {
+		int num = 1234321;
+		int temp=num;
+		int r;
+		int sum = 0;
+		while (num>0) {
+			 r = num %10;
+			 sum = (sum*10)+r;
+			num =num / 10;
+		}
+	
+		
+		if (sum==temp) {
+			System.out.println("String is  a palandrome");
+		}
+		else {
+			System.out.println("String is not a palandrome");
+		}
+	}
+		
+		
+	}
+
+Time complexity of array , String and number is -- O(n) because we use Loops in the algorithms..
+Space complexity of array , String and number is -- O(1) because of Auxillary space used in algorithms..
